@@ -1,8 +1,9 @@
 import streamlit as st
+import numpy as np
 
-st.header('st.button')
+st.file_uploader("Upload a CSV")
 
-if st.button('Say hello'):
-     st.write('Why hello there')
-else:
-     st.write('Goodbye')
+# Insert a chat message container.
+with st.chat_message("user"):
+    st.write("Hello 👋")
+    st.line_chart(np.random.randn(30, 3))
